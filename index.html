@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="vendors/jquery.js"></script>
+        <script src="scripts/client.js"></script>
+        <link rel="stylesheet" href="styles/style.css">
+        <title>jQuery Salary Calculator</title>
+    </head>
+    <body>
+        <div id="salary-calculator">
+            <h1>Salary Calculator</h1>
+        </div>
+        <div id="add-employee">
+            <h2>Add Employee</h2>
+        </div>
+        <div id="employee-input">
+            <input type="text" placeholder="First Name" id="first-name">
+            <input type="text" placeholder="Last Name" id="last-name">
+            <input type="number" placeholder="ID Number" id="id-number">
+            <input type="text" placeholder="Job Title" id="job-title">
+            <input type="number" placeholder="Annual Salary" id="annual-salary">
+            <button id="add-employee">Submit</button>
+        </div>
+        <div id="employee-results">
+            <label for="employee-results"><h2>Employee Results</h2></label>
+            <table>
+                <thead>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>ID Number</th>
+                    <th>Job Title</th>
+                    <th>Annual Salary</th>
+                    <th>Delete</th>
+                </thead>
+                <tbody id="employee-output">
+                    <tr>
+                        <td>Jane</td>
+                        <td>Doe</td>
+                        <td>4321</td>
+                        <td>CSR</td>
+                        <td>35,000</td>
+                        <td><button id="delete-button">Delete</button></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr id="total-employee-cost">
+                        <td><h3>Total Monthly Cost: $35,000</h3></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </body>
+</html>
