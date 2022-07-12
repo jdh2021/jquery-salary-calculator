@@ -15,9 +15,9 @@ Weekend jQuery Salary Calculator
 [X] Inputs to the table data cells in the employee output table
 [X] Clear the inputs
 
-[ ] Target the output (total monthly cost) by its ID and empty it
-[ ] Loop the annual salaries to add and divide by 12 to get the value of the total monthly cost
-[ ] Append the value of the total monthly cost to its ID
+[X] Target the output (total monthly cost) by its ID and empty it
+[X] Loop the annual salaries to add and divide by 12 to get the value of the total monthly cost
+[X] Append the value of the total monthly cost to its ID
 [ ] Use conditional logic and CSS styling to change the background color for monthly costs exceeding $20,000
 
 [ ] Get the data from the delete button upon click to determine which employee was targeted
