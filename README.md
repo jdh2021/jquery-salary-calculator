@@ -4,15 +4,16 @@ Weekend jQuery Salary Calculator
 
 ## Checklist
 
-[ ] Build out HTML structure including employee output table and placeholders
-[ ] Create inputs for employee first name, last name, ID #, job title, annual salary
-[ ] Create buttons to submit employee and delete employee
+[X] Build out HTML structure including employee output table and placeholders
+[X] Create inputs for employee first name, last name, ID #, job title, annual salary
+[X] Create buttons to submit employee and delete employee
 
-[ ] Get the value of the employee inputs upon button click
-[ ] Store the employee information in an empty array
-[ ] Target the output (employee output table) by ID and empty it
-[ ] Loop through the employee information array to append the value of the inputs to the table data cells in the employee output table
-[ ] Clear the inputs
+[X] Get the value of the employee inputs upon button click
+[X] Store the employee information in an empty array
+[X] Target the output (employee output table) by ID and empty it
+[X] Loop through the employee information array to append the value of the 
+[X] Inputs to the table data cells in the employee output table
+[X] Clear the inputs
 
 [ ] Target the output (total monthly cost) by its ID and empty it
 [ ] Loop the annual salaries to add and divide by 12 to get the value of the total monthly cost
