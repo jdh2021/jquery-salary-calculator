@@ -43,8 +43,7 @@ function displayEmployees(array) {
                     minimumFractionDigits: 2,
                     maximumFractionDigits: 2})}</td>
                 <td><button class="delete-button">Delete</button></td>
-            </tr>
-        `);
+            </tr>`);
     }
     $('input').val('');
 }
@@ -63,15 +62,13 @@ function totalMonthlyCost(array) {
                 maximumFractionDigits: 2})}
             </td>
         </tr>`);
-    console.log(typeof monthlyEmployeeCosts);
+    console.log(monthlyEmployeeCosts);
     if (monthlyEmployeeCosts > 20000 ) {
             $('#monthly-cost-output').addClass("red-background");
             $('#monthly-cost-output').removeClass("blue-background");
-            console.log(monthlyEmployeeCosts);
     } else if (monthlyEmployeeCosts <= 20000 ) {
             $('#monthly-cost-output').removeClass("red-background");
             $('#monthly-cost-output').addClass("blue-background");
-            console.log(monthlyEmployeeCosts);
     }
 }
 
@@ -79,12 +76,13 @@ function deleteEmployee() {
     console.log('in deleteEmployee');
     $(this).parent().parent().remove(); //accesses table data cell then table row. deletes table row.
     console.log($(this).parent().siblings('.delete-id').text()); //targets table data cell siblings with a class of delete-id and then gets the text
-    let employeeId = parseInt($(this).parent().siblings('.delete-id').text());
+    let employeeId = Number($(this).parent().siblings('.delete-id').text());
     for (let i=0; i<employeesArray.length; i+=1) {
         if (employeeId === employeesArray[i].idNumber) {
             employeesArray.splice([i],1);
         }
-    } 
+    }
+    console.log(employeesArray); 
     totalMonthlyCost(employeesArray);
 }
   
