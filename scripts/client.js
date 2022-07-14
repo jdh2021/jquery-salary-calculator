@@ -10,19 +10,23 @@ function readyNow() {
     $('body').on('click', '.delete-button', deleteEmployee);
 }
 
-function getEmployeeInput () {
+function getEmployeeInput() {
     console.log('in getEmployeeInput');
-    const employeeObject = {
+    if ($('#first-name').val() === '' || $('#last-name').val() === '' || $('#id-number').val() === '' || $('#job-title').val() === '' ||  $('#annual-salary').val() === '') {
+        alert('Please complete all fields to add an employee.');
+    } else { 
+        const employeeObject = {
         firstName: $('#first-name').val(),
         lastName: $('#last-name').val(),
         idNumber: parseInt($('#id-number').val()),
         jobTitle: $('#job-title').val(),
         annualSalary: parseInt($('#annual-salary').val()),
+        }
+        employeesArray.push(employeeObject);
+        console.log(employeesArray);
+        displayEmployees(employeesArray);
+        totalMonthlyCost(employeesArray);
     }
-    employeesArray.push(employeeObject);
-    console.log(employeesArray);
-    displayEmployees(employeesArray);
-    totalMonthlyCost(employeesArray);
 }
 
 function displayEmployees(array) {
