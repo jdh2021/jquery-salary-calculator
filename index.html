@@ -7,36 +7,36 @@
         <title>jQuery Salary Calculator</title>
     </head>
     <body>
-        <div id="salary-calculator">
+        <div class="wrapper">
             <h1>Salary Calculator</h1>
-        </div>
-        <div id="add-employee">
             <h2>Add Employee</h2>
+            <div id="employee-input">
+                <input type="text" placeholder="First Name" id="first-name">
+                <input type="text" placeholder="Last Name" id="last-name">
+                <input type="number" placeholder="ID Number" id="id-number">
+                <input type="text" placeholder="Job Title" id="job-title">
+                <input type="number" placeholder="Annual Salary" id="annual-salary">
+                <button id="add-employee-button">Submit</button>
+            </div>
         </div>
-        <div id="employee-input">
-            <input type="text" placeholder="First Name" id="first-name">
-            <input type="text" placeholder="Last Name" id="last-name">
-            <input type="number" placeholder="ID Number" id="id-number">
-            <input type="text" placeholder="Job Title" id="job-title">
-            <input type="number" placeholder="Annual Salary" id="annual-salary">
-            <button id="add-employee-button">Submit</button>
-        </div>
-        <div id="employee-results">
-            <label for="employee-results"><h2>Employee Results</h2></label>
-            <table>
-                <thead>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>ID Number</th>
-                    <th>Job Title</th>
-                    <th>Annual Salary</th>
-                    <th>Delete</th>
-                </thead>
-                <tbody id="employee-output">
-                </tbody>
-                <tfoot id="monthly-cost-output">
-                </tfoot>
-            </table>
+        <div class="wrapper">
+            <div id="employee-results">
+                <label for="employee-results"><h2>Results</h2></label>
+                <table>
+                    <thead>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>ID Number</th>
+                        <th>Job Title</th>
+                        <th>Annual Salary</th>
+                        <th></th>
+                    </thead>
+                    <tbody id="employee-output">
+                    </tbody>
+                    <tfoot id="monthly-cost-output">
+                    </tfoot>
+                </table>
+            </div>
         </div>
     </body>
 </html>

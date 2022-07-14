@@ -1,10 +1,55 @@
 body {
-    background-color: antiquewhite;
+    background-color: #f1faee;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #1d3557;
     margin: 0;
-    padding: 0;
 }
 
 .red-background {
-    background-color: red;
+    background-color: #e63946;
+    color: #f1faee;
+}
+
+.blue-background {
+    background-color: #1d3557;
+    color: #f1faee;
+}
+
+input {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+button {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #457b9d;
+    color: #f1faee;
+    border-radius: 3px;
+}
+
+.wrapper {
+    margin: 10px;
+}
+
+table {
+    width: 96%;
+    border-collapse:collapse;
+}
+
+th, td {
+    width: 16%;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #a8dadc;
+}
+
+tr:nth-child(even) {
+    background-color: #a8dadc;
+  }
+
+tfoot > tr > td {
+    font-weight: bold;
+    text-align: right;
 }

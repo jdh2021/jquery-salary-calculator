@@ -16,11 +16,11 @@ function getEmployeeInput() {
         alert('Please complete all fields to add an employee.');
     } else { 
         const employeeObject = {
-        firstName: $('#first-name').val(),
-        lastName: $('#last-name').val(),
-        idNumber: parseInt($('#id-number').val()),
-        jobTitle: $('#job-title').val(),
-        annualSalary: parseInt($('#annual-salary').val()),
+            firstName: $('#first-name').val(),
+            lastName: $('#last-name').val(),
+            idNumber: Number($('#id-number').val()),
+            jobTitle: $('#job-title').val(),
+            annualSalary: Number($('#annual-salary').val()),
         }
         employeesArray.push(employeeObject);
         console.log(employeesArray);
@@ -39,7 +39,9 @@ function displayEmployees(array) {
                 <td>${employee.lastName}</td>
                 <td class="delete-id">${employee.idNumber}</td>
                 <td>${employee.jobTitle}</td>
-                <td>$${employee.annualSalary}</td>
+                <td>$${employee.annualSalary.toLocaleString('en', {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2})}</td>
                 <td><button class="delete-button">Delete</button></td>
             </tr>
         `);
@@ -52,19 +54,23 @@ function totalMonthlyCost(array) {
     $('#monthly-cost-output').empty();
     let monthlyEmployeeCosts = 0;
     for (let employee of array) {
-        monthlyEmployeeCosts+=employee.annualSalary/12;
-    } 
+        monthlyEmployeeCosts+=employee.annualSalary/12; 
+    }
     $('#monthly-cost-output').append(`
         <tr>
-            <td>
-                <h3>Total Monthly: $${monthlyEmployeeCosts}</h3>
+            <td colspan = "6">Total Monthly Cost: $${monthlyEmployeeCosts.toLocaleString('en', {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2})}
             </td>
         </tr>`);
+    console.log(typeof monthlyEmployeeCosts);
     if (monthlyEmployeeCosts > 20000 ) {
             $('#monthly-cost-output').addClass("red-background");
+            $('#monthly-cost-output').removeClass("blue-background");
             console.log(monthlyEmployeeCosts);
     } else if (monthlyEmployeeCosts <= 20000 ) {
             $('#monthly-cost-output').removeClass("red-background");
+            $('#monthly-cost-output').addClass("blue-background");
             console.log(monthlyEmployeeCosts);
     }
 }

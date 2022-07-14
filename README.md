@@ -22,7 +22,9 @@ Weekend jQuery Salary Calculator
 
 [X] Create click event handler with delete button and delete-button class to remove employee record
 [X] Use $(this) to traverse the DOM and remove the specific employee row from the employee output table
+[X] Retrieve deleted employee ID using $(this) and .siblings(). Search employee array for that ID to remove the employee object
+[X] Recalculate total monthly costs by looping through the revised array
 
 ## Description
 
-
+I solved the problem of determining the monthly cost of salaried employees. I solved this by inputting employee information, storing the inputted information in a table, running a calculation on the inputted information and outputting the result into a total monthly cost.
