@@ -11,8 +11,7 @@ Weekend jQuery Salary Calculator
 [X] Get the value of the employee inputs upon button click
 [X] Store the employee information in an empty array
 [X] Target the output (employee output table) by ID and empty it
-[X] Loop through the employee information array to append the value of the 
-[X] Inputs to the table data cells in the employee output table
+[X] Loop through the employee information array to append the value of the inputs to the table data cells in the employee output table
 [X] Clear the inputs
 
 [X] Target the output (total monthly cost) by its ID and empty it
